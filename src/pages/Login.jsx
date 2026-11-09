@@ -77,13 +77,13 @@ export default function Login() {
               Email
             </label>
             <div className="relative">
-              <Mail className="pointer-events-none absolute left-3.5 top-3 h-4 w-4 text-cream-200/50" />
+              <Mail className="pointer-events-none absolute left-3.5 top-3 z-10 h-4 w-4 text-[#300B32]/70" />
               <input
                 id="email"
                 type="email"
                 required
                 placeholder="admin@getpuja.com"
-                className="w-full rounded-xl border border-[#F7B928]/35 bg-white/10 py-2.5 pl-10 pr-3.5 text-sm text-white placeholder-white/40 outline-none transition focus:border-[#F7B928] focus:bg-white/15 focus:ring-2 focus:ring-[#F7B928]/25"
+                className="w-full rounded-xl border border-[#F7B928]/50 bg-white/95 py-2.5 pl-10 pr-3.5 text-sm font-medium text-[#300B32] placeholder-stone-400 outline-none transition focus:border-[#F7B928] focus:bg-white focus:ring-2 focus:ring-[#F7B928]/35"
                 value={form.email}
                 onChange={(e) => setForm({ ...form, email: e.target.value })}
               />
@@ -98,13 +98,13 @@ export default function Login() {
               Password
             </label>
             <div className="relative">
-              <Lock className="pointer-events-none absolute left-3.5 top-3 h-4 w-4 text-cream-200/50" />
+              <Lock className="pointer-events-none absolute left-3.5 top-3 z-10 h-4 w-4 text-[#300B32]/70" />
               <input
                 id="pw"
                 type={showPassword ? 'text' : 'password'}
                 required
                 placeholder="Enter your password"
-                className="w-full rounded-xl border border-[#F7B928]/35 bg-white/10 py-2.5 pl-10 pr-10 text-sm text-white placeholder-white/40 outline-none transition focus:border-[#F7B928] focus:bg-white/15 focus:ring-2 focus:ring-[#F7B928]/25"
+                className="w-full rounded-xl border border-[#F7B928]/50 bg-white/95 py-2.5 pl-10 pr-10 text-sm font-medium text-[#300B32] placeholder-stone-400 outline-none transition focus:border-[#F7B928] focus:bg-white focus:ring-2 focus:ring-[#F7B928]/35"
                 value={form.password}
                 onChange={(e) => setForm({ ...form, password: e.target.value })}
               />
@@ -112,7 +112,7 @@ export default function Login() {
                 type="button"
                 onClick={() => setShowPassword((prev) => !prev)}
                 aria-label={showPassword ? 'Hide password' : 'Show password'}
-                className="absolute inset-y-0 right-0 flex items-center pr-3.5 text-cream-200/60 transition hover:text-[#F7B928]"
+                className="absolute inset-y-0 right-0 z-10 flex items-center pr-3.5 text-[#300B32]/80 transition hover:text-[#F58216]"
               >
                 {showPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
               </button>
